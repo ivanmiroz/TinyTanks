@@ -13,6 +13,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Audio,
 		C3.Behaviors.Fade,
 		C3.Behaviors.Orbit,
+		C3.Plugins.Text,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Sprite.Acts.SetAngle,
 		C3.Plugins.System.Exps.random,
@@ -26,11 +27,15 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
+		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.Text.Acts.SetVisible,
 		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
 		C3.Plugins.Sprite.Acts.SetTowardPosition,
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Exps.Y,
-		C3.Plugins.Sprite.Cnds.IsOnScreen
+		C3.Plugins.Sprite.Cnds.IsOnScreen,
+		C3.Plugins.System.Cnds.EveryTick,
+		C3.Plugins.Text.Acts.SetText
 	];
 };
 self.C3_JsPropNameTable = [
@@ -54,7 +59,13 @@ self.C3_JsPropNameTable = [
 	{BulletRed: 0},
 	{FenceRed: 0},
 	{Orbit: 0},
-	{Turret: 0}
+	{Turret: 0},
+	{Text: 0},
+	{TreeGreenLarge: 0},
+	{TreeGreenSmall: 0},
+	{TreeBrownLarge: 0},
+	{Gameover: 0},
+	{Score: 0}
 ];
 
 self.InstanceType = {
@@ -70,5 +81,10 @@ self.InstanceType = {
 	Fire: class extends self.ISpriteInstance {},
 	BulletRed: class extends self.ISpriteInstance {},
 	FenceRed: class extends self.ISpriteInstance {},
-	Turret: class extends self.ISpriteInstance {}
+	Turret: class extends self.ISpriteInstance {},
+	Text: class extends self.ITextInstance {},
+	TreeGreenLarge: class extends self.ISpriteInstance {},
+	TreeGreenSmall: class extends self.ISpriteInstance {},
+	TreeBrownLarge: class extends self.ISpriteInstance {},
+	Gameover: class extends self.ITextInstance {}
 }
